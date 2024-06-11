@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="slider-container slider-dimensions">
+        <div class="slider">
+            <div data-img-url="5cm-black-netpot-jaring.jpg" class="slider-dimensions"></div>
+            <div data-img-url="5cm-black-netpot-polos.jpg" class="slider-dimensions"></div>
+            <div data-img-url="5cm-white-netpot-jaring.jpg" class="slider-dimensions"></div>
+        </div>
+
+        <div class="nav-container slider-dimensions">
+            <button id="prev" data-index-change="-1"><img src="./img/bxs-chevron-left.svg" alt="Previous"></button>
+            <div class="index-container">
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
+            <button id="next" data-index-change="1"><img src="./img/bxs-chevron-right.svg" alt="Next"></button>
+        </div>
+    </div>
+</body>
+</html>

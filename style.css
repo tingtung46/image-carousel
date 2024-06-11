@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-dimensions {
+    width: min(100vw, 720px);
+    aspect-ratio: 3 / 2;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    background-color: lightgray;
+}
+
+.slider {
+    position: absolute;
+    display: flex;
+    transform: translateX(-0%);
+    transition: transform 1s;
+}
+
+.slider > div {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav-container {
+    position: absolute;
+    padding: 0 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: radial-gradient(transparent, rgba(0, 0, 0, .3));
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.nav-container:hover {
+    opacity: 1;
+}
+
+.index-container {
+    align-self: flex-end;
+    display: flex;
+    gap: 30px;
+}
+
+.index-container > button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, .3);
+    transition: background-color .2s;
+    cursor: pointer;
+}
+
+.index-container > button:hover {
+    background-color: rgba(255, 255, 255, .7);
+}
+
+#prev,
+#next {
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(51, 51, 51, .2);
+    color: #fff;
+    padding: 10px;
+}
+
+@media (max-width: 500px) {
+    .nav-container {
+        padding: 0 0 10px;
+    }
+
+    .index-container {
+        gap: 20px;
+    }
+}
